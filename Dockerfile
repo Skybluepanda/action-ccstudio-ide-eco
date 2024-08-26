@@ -1,7 +1,7 @@
 # Base Image
 FROM uoohyo/ccstudio-ide:latest
 RUN apt-get update && apt-get install -y python3 python3-pip git && ln -s /usr/bin/python3 /usr/bin/python
-RUN sudo chown -R $(whoami) /github/workspace
+RUN chown -R $(whoami) /github/workspace
 
 # File Copy
 COPY entrypoint.sh /entrypoint.sh
